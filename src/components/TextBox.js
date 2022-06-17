@@ -31,7 +31,8 @@ export default function TextBox() {
         textAlign: "center",
         margin: "10px",
         userSelect: "none",
-
+        height: "200px",
+        overflowY: "scroll",
         backgroundColor: "rgba(1, 1, 65, 0.354)",
         color: "#9c9cd6",
     }
