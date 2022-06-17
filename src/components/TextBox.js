@@ -79,6 +79,11 @@ export default function TextBox() {
                 <h1 style={{ color: "#010141" }}>Preview Box</h1>
                 <p style={previewBox}>{text.length > 0 ? text : "Please enter your text"}</p>
             </div>
+            <div className="summary" style={containerStyle}>
+                <p>{text.split(" ").length} Words</p>
+                <p>{text.length} Characters</p>
+                <p>{0.008 * text.split(" ").length} Minutes Read</p>
+            </div>
         </>
     )
 }
