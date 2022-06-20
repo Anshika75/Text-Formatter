@@ -81,9 +81,9 @@ export default function TextBox() {
                 <p style={previewBox}>{text.length > 0 ? text : "Please enter your text"}</p>
             </div>
             <div className="summary" style={containerStyle}>
-                <p>{text.split(" ").length} Words</p>
+                <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Words</p>
                 <p>{text.length} Characters</p>
-                <p>{0.008 * text.split(" ").length} Minutes Read</p>
+                <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes read </p>
             </div>
         </>
     )
